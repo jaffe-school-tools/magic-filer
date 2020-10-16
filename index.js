@@ -37,13 +37,6 @@ GetSheetDone.labeledCols('1EdWFjYptRKArAVp9KUmiF16-KjMsF25ueCPmXcSjziI')
       } else {
         console.log('File '+fname+' not filed');
         $notFound++;
-        // let dstFolder = BASE_FOLDER+NOT_FOUND_FOLDER;
-        // if (!fs.existsSync(dstFolder)) {
-        //   fs.mkdirSync(dstFolder);
-        // }
-        // let dstFile = dstFolder+'/'+fname;
-        // fs.copyFileSync(srcFile, dstFile);
-        // rimraf.sync(srcFile);
       }
     })
     console.log('--------------------------------------------------------');
