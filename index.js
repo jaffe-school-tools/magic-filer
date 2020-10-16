@@ -6,8 +6,8 @@ const BASE_FOLDER = '/Users/Roger/Desktop/G-Drive Assignments/';
 const TO_GRADE_FOLDER = '1ToGrade/';
 const NOT_FOUND_FOLDER = 'NotFound/';
 
-let found = 0;
-let notFound = 0;
+let $found = 0;
+let $notFound = 0;
 
 GetSheetDone.labeledCols('1EdWFjYptRKArAVp9KUmiF16-KjMsF25ueCPmXcSjziI')
   .then((data) => {
@@ -32,11 +32,11 @@ GetSheetDone.labeledCols('1EdWFjYptRKArAVp9KUmiF16-KjMsF25ueCPmXcSjziI')
         }
       })
       if (found) {
-        found++;
+        $found++;
         rimraf.sync(srcFile);
       } else {
         console.log('File '+fname+' not filed');
-        notFound++;
+        $notFound++;
         // let dstFolder = BASE_FOLDER+NOT_FOUND_FOLDER;
         // if (!fs.existsSync(dstFolder)) {
         //   fs.mkdirSync(dstFolder);
@@ -47,8 +47,8 @@ GetSheetDone.labeledCols('1EdWFjYptRKArAVp9KUmiF16-KjMsF25ueCPmXcSjziI')
       }
     })
     console.log('--------------------------------------------------------');
-    console.log('Files found: '+found);
-    console.log('Files not found: '+notFound);
+    console.log('Files found: '+$found);
+    console.log('Files not found: '+$notFound);
   }).catch(err => {
     console.log('Error');
     console.error(err);
